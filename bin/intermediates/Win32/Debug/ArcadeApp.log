@@ -1,0 +1,8 @@
+﻿  App.cpp
+C:\Dev\Projects\ArcadeApp\ArcadeApp\App\App.cpp(25,69): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Dev\Projects\ArcadeApp\ArcadeApp\App\App.cpp(25,51): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Dev\Projects\ArcadeApp\ArcadeApp\App\App.cpp(27,75): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Dev\Projects\ArcadeApp\ArcadeApp\App\App.cpp(27,48): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Dev\Projects\ArcadeApp\ArcadeApp\App\App.cpp(28,74): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Dev\Projects\ArcadeApp\ArcadeApp\App\App.cpp(28,47): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
+  ArcadeApp.vcxproj -> C:\Dev\Projects\ArcadeApp\bin\Win32\Debug\ArcadeApp.exe
