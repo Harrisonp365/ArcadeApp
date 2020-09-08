@@ -96,7 +96,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Dev\Projects\ArcadeApp\ArcadeApp\App;C:\Dev\Projects\ArcadeApp\ArcadeApp\Shapes;C:\Dev\Projects\ArcadeApp\ArcadeApp\Utils;C:\Dev\Projects\ArcadeApp\ArcadeApp\Graphics;C:\Dev\Plugins\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes;C:\Dev\Projects\ArcadeApp\ArcadeApp\App;C:\Dev\Projects\ArcadeApp\ArcadeApp\Shapes;C:\Dev\Projects\ArcadeApp\ArcadeApp\Utils;C:\Dev\Projects\ArcadeApp\ArcadeApp\Graphics;C:\Dev\Plugins\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -113,7 +113,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Dev\Projects\ArcadeApp\ArcadeApp\App;C:\Dev\Projects\ArcadeApp\ArcadeApp\Shapes;C:\Dev\Projects\ArcadeApp\ArcadeApp\Utils;C:\Dev\Projects\ArcadeApp\ArcadeApp\Graphics;C:\Dev\Plugins\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes;C:\Dev\Projects\ArcadeApp\ArcadeApp\App;C:\Dev\Projects\ArcadeApp\ArcadeApp\Shapes;C:\Dev\Projects\ArcadeApp\ArcadeApp\Utils;C:\Dev\Projects\ArcadeApp\ArcadeApp\Graphics;C:\Dev\Plugins\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -157,6 +157,7 @@
     <ClCompile Include="Graphics\Color.cpp" />
     <ClCompile Include="Graphics\Screen.cpp" />
     <ClCompile Include="Graphics\ScreenBuffer.cpp" />
+    <ClCompile Include="Scenes\ArcadeScene.cpp" />
     <ClCompile Include="Shapes\Circle.cpp" />
     <ClCompile Include="Shapes\Line2D.cpp" />
     <ClCompile Include="Shapes\Rectangle.cpp" />
@@ -174,6 +175,8 @@
     <ClInclude Include="Graphics\Color.h" />
     <ClInclude Include="Graphics\Screen.h" />
     <ClInclude Include="Graphics\ScreenBuffer.h" />
+    <ClInclude Include="Scenes\ArcadeScene.h" />
+    <ClInclude Include="Scenes\Scene.h" />
     <ClInclude Include="Shapes\Circle.h" />
     <ClInclude Include="Shapes\Line2D.h" />
     <ClInclude Include="Shapes\Rectangle.h" />
