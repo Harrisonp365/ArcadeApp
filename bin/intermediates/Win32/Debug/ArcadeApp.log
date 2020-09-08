@@ -1,12 +1,13 @@
-﻿  App.cpp
-  ArcadeScene.cpp
-C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes\ArcadeScene.cpp(26,72): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
-C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes\ArcadeScene.cpp(26,52): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
-C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes\ArcadeScene.cpp(28,78): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
-C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes\ArcadeScene.cpp(28,49): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
-C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes\ArcadeScene.cpp(29,77): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
-C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes\ArcadeScene.cpp(29,48): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
+﻿  ArcadeScene.cpp
+C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes\ArcadeScene.cpp(40,72): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes\ArcadeScene.cpp(40,52): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes\ArcadeScene.cpp(42,78): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes\ArcadeScene.cpp(42,49): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes\ArcadeScene.cpp(43,77): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes\ArcadeScene.cpp(43,48): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
+  Utils.cpp
   Generating Code...
-C:\Dev\Projects\ArcadeApp\ArcadeApp\Scenes\ArcadeScene.cpp(38): warning C4172: returning address of local variable or temporary
   main.cpp
+C:\Dev\Projects\ArcadeApp\ArcadeApp\Input\InputController.h(6,22): warning C4099: 'GameController': type name first seen using 'class' now seen using 'struct'
+C:\Dev\Projects\ArcadeApp\ArcadeApp\Input\GameController.h(7): message : see declaration of 'GameController'
   ArcadeApp.vcxproj -> C:\Dev\Projects\ArcadeApp\bin\Win32\Debug\ArcadeApp.exe

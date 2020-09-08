@@ -2,7 +2,8 @@
 #include "App.h"
 #include "SDL.h"
 #include "ArcadeScene.h"
-#include <memory>
+#include <cassert>
+
 
 
 App& App::Singleton()
@@ -13,6 +14,10 @@ App& App::Singleton()
 bool App::Init(uint32_t width, uint32_t height, uint32_t mag)
 {
 	mnoptrWindow = mScreen.Init(width, height, mag);
+
+	std::unique_ptr<ArcadeScene> arcadeScene = std::make_unique<ArcadeScene>();
+	PushScene(std::move(arcadeScene));
+
 	return mnoptrWindow != nullptr;
 }
 void App::Run()
@@ -28,8 +33,9 @@ void App::Run()
 		uint32_t dt = 10;
 		uint32_t accumulator = 0;
 
-		std::unique_ptr<ArcadeScene> arcadeScene = std::make_unique<ArcadeScene>();
-		arcadeScene->Init();
+		mInputController.Init([&running](uint32_t dt, InputState state) {
+			running = false;
+			});
 
 		while(running)
 		{
@@ -45,27 +51,60 @@ void App::Run()
 			accumulator += frameTime;
 
 			//Input
-			while(SDL_PollEvent(&sdlEvent))
-			{
-				switch (sdlEvent.type)
-				{
-				case SDL_QUIT:
-					running = false;
-					break;
+			mInputController.Update(dt);
+
+			Scene* topScene = App::TopScene();
+			assert(topScene && "Why no scene????");
+
+			if (topScene)
+			{ //Update
+				while (accumulator >= dt)
+				{ //Update current scene by delta time
+					topScene->Update(dt);
+					accumulator -= dt;
 				}
+				//Render
+				topScene->Draw(mScreen);
 			}
-			//Update
-			while(accumulator >= dt)
-			{ //Update current scene by delta time
-				arcadeScene->Update(dt);
-				std::cout << "Delta time step: " << dt << std::endl;
-				accumulator -= dt;
-			}
-			//Render
-			arcadeScene->Draw(mScreen);
 			mScreen.SwapScreen();
-			
 		}
 	}
 }
 
+void App::PushScene(std::unique_ptr<Scene> scene)
+{
+	assert(scene && "Don't push nullptr");
+	if (scene) 
+	{
+		scene->Init();
+		mInputController.SetGameController(scene->GetGameController());
+		mSceneStack.emplace_back(std::move(scene));
+		SDL_SetWindowTitle(mnoptrWindow, TopScene()->GetSceneName().c_str());
+	}
+	
+
+}
+
+void App::PopScene()
+{
+	if (mSceneStack.size() > 1)
+	{
+		mSceneStack.pop_back();
+	}
+
+	if (TopScene())
+	{
+		mInputController.SetGameController(TopScene()->GetGameController());
+		SDL_SetWindowTitle(mnoptrWindow, TopScene()->GetSceneName().c_str());
+	}
+	
+}
+
+Scene* App::TopScene()
+{
+	if (mSceneStack.empty())
+	{
+		return nullptr;
+	}
+	return mSceneStack.back().get();
+}
