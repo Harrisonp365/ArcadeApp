@@ -24,7 +24,6 @@ void App::Run()
 {
 	if (mnoptrWindow)
 	{
-		SDL_Event sdlEvent;
 		bool running = true;
 
 		uint32_t lastTick = SDL_GetTicks();
